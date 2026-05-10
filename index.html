@@ -1,0 +1,95 @@
+export default function WaterResortPage() {
+  return (
+    <div className="min-h-screen bg-sky-50 text-gray-900">
+      <header className="bg-[url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center h-[70vh] relative">
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">
+            Lake Wave Olecko
+          </h1>
+          <p className="mt-6 text-xl md:text-2xl text-white max-w-2xl">
+            Bar nad jeziorem • Plaża • Wypożyczalnia sprzętu wodnego
+          </p>
+          <button className="mt-8 px-8 py-4 rounded-2xl bg-sky-500 text-white text-lg shadow-xl hover:scale-105 transition">
+            Zarezerwuj sprzęt
+          </button>
+        </div>
+      </header>
+
+      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
+        <div className="bg-white rounded-3xl shadow-xl p-8">
+          <h2 className="text-2xl font-bold mb-4">🍹 Bar na plaży</h2>
+          <p>
+            Orzeźwiające napoje, burgery, frytki i letnia muzyka przy samym jeziorze.
+            Idealne miejsce na odpoczynek po pływaniu.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-xl p-8">
+          <h2 className="text-2xl font-bold mb-4">🚤 Sprzęt wodny</h2>
+          <p>
+            Wypożycz kajaki, rowerki wodne, SUP-y i łodzie. Sprzęt dostępny codziennie
+            od 9:00 do 21:00.
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-xl p-8">
+          <h2 className="text-2xl font-bold mb-4">🏖️ Plaża</h2>
+          <p>
+            Piaszczysta plaża z leżakami, pomostem i strefą relaksu dla całej rodziny.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-10">Cennik wypożyczalni</h2>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              ["Kajak", "30 zł / h"],
+              ["SUP", "25 zł / h"],
+              ["Rower wodny", "40 zł / h"],
+              ["Łódź", "60 zł / h"],
+            ].map(([name, price]) => (
+              <div
+                key={name}
+                className="bg-sky-100 rounded-2xl p-6 shadow-lg"
+              >
+                <h3 className="text-2xl font-semibold">{name}</h3>
+                <p className="mt-4 text-lg">{price}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-sky-100">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <img
+            src="https://images.unsplash.com/photo-1519046904884-53103b34b206?q=80&w=1200&auto=format&fit=crop"
+            alt="Plaża"
+            className="rounded-3xl shadow-2xl"
+          />
+
+          <div>
+            <h2 className="text-4xl font-bold mb-6">Dlaczego warto?</h2>
+            <ul className="space-y-4 text-lg">
+              <li>✅ Piękne widoki nad jeziorem Olecko Wielkie</li>
+              <li>✅ Rodzinna atmosfera</li>
+              <li>✅ Nowoczesny sprzęt wodny</li>
+              <li>✅ Wieczorne imprezy i muzyka na żywo</li>
+              <li>✅ Bezpieczna plaża dla dzieci</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-gray-900 text-white py-12 text-center">
+        <h2 className="text-3xl font-bold">Lake Wave Olecko</h2>
+        <p className="mt-4">📍 Olecko • Plaża miejska</p>
+        <p className="mt-2">📞 +48 500 123 456</p>
+        <p className="mt-2">✉️ kontakt@lakewave.pl</p>
+      </footer>
+    </div>
+  )
+}
